@@ -1,0 +1,26 @@
+.whatsapp {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    right: 6rem;
+    bottom: 6rem;
+    z-index: 10;
+    background-color: $color-primary-light;
+    fill: white;
+    border-radius: 50%;
+
+    @include respond(phone) {
+      right: 3rem;
+      bottom: 3rem;
+    }
+  }
+
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}

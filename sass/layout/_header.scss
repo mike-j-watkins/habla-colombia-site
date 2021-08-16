@@ -1,0 +1,48 @@
+.header {
+  height: 95vh;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+
+  @include respond(tab-port) {
+    height: 85vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 80vh);
+  }
+
+  &__background {
+    background-image: url(../img/mountains-dark-2x.jpg);
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    @include respond(phone) {
+      background-image: url(../img/mountains-dark-1x.jpg);
+    }
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 4.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1) translateY(-1rem);
+    }
+  }
+
+  &__text-box {
+    z-index: 5;
+    margin-top: -1rem;
+  }
+}

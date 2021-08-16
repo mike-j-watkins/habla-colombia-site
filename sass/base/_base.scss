@@ -1,0 +1,31 @@
+/* pseudoelements aren't autoselected by * selector so add them */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* best practice is to set to inherit then set border-box in body (helps with plugin functionality) */
+  box-sizing: inherit;
+}
+/* use HTML to set root font for using rem */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //want 1 rem to be 9px, so 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem 8 px, so 8/16 = 50
+  }
+}
+
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
