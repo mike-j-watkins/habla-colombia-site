@@ -6,7 +6,7 @@ const instagramLink = document.querySelector(".instagram-item");
 const navLinks = document.querySelectorAll(".navigation__link");
 const swiperCards = document.querySelectorAll(".swiper-card");
 
-//SWIPER FUNCTIONALITY. slidesperview checks width > 900 then sets visible slides to 3 or 1
+//SWIPER FUNCTIONALITY. slidesperview checks width > 1300 then sets visible slides to 3 or 1
 const swiper = new Swiper(".swiper-container", {
   spaceBetween: 30,
   slidesPerView: myVw > 1300 ? 3 : 1,
